@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Əziz Müəllimin Dərsləri</title>
+  <title>Əziz Müəllim | Rəsmi Sayt</title>
   <style>
-    /* Genel sıfırlama */
     * {
       margin: 0;
       padding: 0;
@@ -13,14 +12,13 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
       color: #333;
       line-height: 1.7;
-      min-height: 100vh;
       background-image: 
-        radial-gradient(circle at 10% 20%, rgba(200, 230, 255, 0.3) 0%, transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(255, 220, 200, 0.3) 0%, transparent 30%);
+        radial-gradient(circle at 15% 30%, rgba(200, 230, 255, 0.2) 0%, transparent 35%),
+        radial-gradient(circle at 85% 70%, rgba(255, 220, 210, 0.2) 0%, transparent 35%);
     }
 
     .container {
@@ -42,47 +40,74 @@
       font-weight: 600;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #7f8c8d;
-      max-width: 600px;
-      margin: 0 auto;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #34495e;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 10px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: rgba(52, 152, 219, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     .card {
       background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.4);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       padding: 30px;
       margin-bottom: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     }
 
     .card h2 {
       font-size: 1.8rem;
       color: #2980b9;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .lesson-list {
+    .card h2::before {
+      content: "📌";
+    }
+
+    ul {
       list-style: none;
     }
 
-    .lesson-list li {
+    ul li {
       padding: 12px 15px;
-      margin: 10px 0;
+      margin: 8px 0;
       background: rgba(240, 248, 255, 0.6);
       border-radius: 12px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #34495e;
       border-left: 4px solid #3498db;
     }
@@ -98,70 +123,135 @@
 
     footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 60px;
       color: #95a5a6;
       font-size: 0.9rem;
+      padding: 20px;
     }
 
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
       }
+      nav {
+        gap: 10px;
+      }
+      nav a {
+        font-size: 1rem;
+        padding: 8px 12px;
+      }
       .card {
         padding: 20px;
-      }
-      .lesson-list li {
-        font-size: 1rem;
-        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
+
+    <!-- Başlıq -->
     <header>
-      <h1>📚 Dərslərim</h1>
-      <p>Əziz müəllim — Biliklərinizi tələbələrlə paylaşmaq üçün yaradılmış rəsmi sayt.</p>
+      <h1>📚 Əziz Müəllim</h1>
+      <p>Azərbaycan Dili & Riyaziyyat Müəllimi | IX-XI Siniflər</p>
     </header>
 
-    <!-- Dərs 1 -->
-    <div class="card">
-      <h2>Azərbaycan Dili və Ədəbiyyat</h2>
-      <ul class="lesson-list">
-        <li>İsimlər və simlər arasında fərq</li>
-        <li>Şeirlərdə aliterasiya və metafora</li>
-        <li>N.Nərimanovun əsərləri</li>
-        <li>Qafiyə növləri və bənd quruluşu</li>
-      </ul>
-      <p><strong>Ev tapşırığı:</strong> "Vaqif" pyesinin mövzusu haqqında 200 söz yazın. Son tarix: 10 Noyabr.</p>
-    </div>
+    <!-- Menyu -->
+    <nav>
+      <a href="#haqqinda">Haqqında</a>
+      <a href="#dersler">Dərslər</a>
+      <a href="#ev-tapsiriqlari">Ev Tapsırıqları</a>
+      <a href="#pdf-materiallar">PDF Materiallar</a>
+      <a href="#ders-saatlari">Dərs Saatları</a>
+      <a href="#elaqe">Əlaqə</a>
+    </nav>
 
-    <!-- Dərs 2 -->
-    <div class="card">
-      <h2>Riyaziyyat</h2>
-      <ul class="lesson-list">
-        <li>Kvadrat tənliklərin həlli</li>
-        <li>Funksiyalar və qrafiklər</li>
-        <li>Törəmələrə giriş</li>
-        <li>Triqonometrik ifadələr</li>
-      </ul>
-      <p><strong>Test:</strong> Gələn həftə Cümə günü riyaziyyat testi keçiriləcək. Hazırlıq üçün Fənn Kitabı, səhifə 87–105.</p>
-    </div>
+    <!-- Haqqında -->
+    <section id="haqqinda" class="card">
+      <h2>Haqqında</h2>
+      <p>
+        Mən Azərbaycan Dili və Riyaziyyat fənləri üzrə 10 illik təcrübəyə malik müəlliməm. 
+        Məqsədim tələbələrimin yalnız imtahanlarda yox, həyatda da uğurlu olmalarına kömək olmaq.
+      </p>
+      <p>
+        Bu saytda bütün dərslər, ev tapsırıqları, materiallar və dərs saatları yer alır. 
+        Zəhmət olmasa mütəmadi yoxlayın.
+      </p>
+    </section>
 
-    <!-- Duyuru -->
-    <div class="card">
-      <h2>📢 Duyurular</h2>
+    <!-- Dərslər -->
+    <section id="dersler" class="card">
+      <h2>Dərslər</h2>
+      <ul>
+        <li><strong>Azərbaycan Dili:</strong> Qrammatika, ifadə quruluşu, redaksiya</li>
+        <li><strong>Ədəbiyyat:</strong> Klassik və müasir ədəbiyyat, analiz və təhlil</li>
+        <li><strong>Riyaziyyat:</strong> Cəbr, həndəsə, triqonometriya, statistika</li>
+        <li><strong>Hazırlıq:</strong> QEY, Üçüncü Dövr, buraxılış imtahanlarına hazırlıq</li>
+      </ul>
+    </section>
+
+    <!-- Ev Tapsırıqları -->
+    <section id="ev-tapsiriqlari" class="card">
+      <h2>Ev Tapsırıqları</h2>
       <div class="announcement">
-        <p><strong>Diqqət!</strong> Dərs saatları cümə axşamı 16:00-dan sonra <strong>Zoom</strong> ilə keçiriləcək. Link tələbə qrupuna göndəriləcək.</p>
+        <p><strong>📘 Azərbaycan Dili:</strong> Səh. 45, №12–18. Son tarix: <em>12 Noyabr</em></p>
       </div>
-      <div class="announcement" style="margin-top: 15px;">
-        <p>Yeni dərs planı PDF formatda <strong>"Sənədlər"</strong> bölməsində yüklənib.</p>
+      <div class="announcement" style="margin-top: 10px;">
+        <p><strong>🧮 Riyaziyyat:</strong> Kvadrat tənliklər üzərində 10 nümunə həll et. Son tarix: <em>14 Noyabr</em></p>
       </div>
-    </div>
+      <div class="announcement" style="margin-top: 10px;">
+        <p><strong>📖 Ədəbiyyat:</strong> "Vaqif" pyesinin son 3 fəslini oxu və xülasə yaz. Son tarix: <em>15 Noyabr</em></p>
+      </div>
+    </section>
 
+    <!-- PDF Materiallar -->
+    <section id="pdf-materiallar" class="card">
+      <h2>PDF Materiallar</h2>
+      <ul>
+        <li><a href="#!" style="color: #2980b9; text-decoration: underline;">Cəbr Dərsliyi (IX sinif).pdf</a></li>
+        <li><a href="#!" style="color: #2980b9; text-decoration: underline;">Azərbaycan Dili Qrammatikası.pdf</a></li>
+        <li><a href="#!" style="color: #2980b9; text-decoration: underline;">QEY Hazırlığı – 2025.pdf</a></li>
+        <li><a href="#!" style="color: #2980b9; text-decoration: underline;">Triqonometriya Cədvəli.pdf</a></li>
+      </ul>
+      <p style="margin-top: 15px; font-size: 0.95rem; color: #7f8c8d;">
+        <em>Qeyd: PDF-ləri yükləmək üçün linkə klikləyin. Yeni materiallar hər həftə yenilənir.</em>
+      </p>
+    </section>
+
+    <!-- Dərs Saatları -->
+    <section id="ders-saatlari" class="card">
+      <h2>Dərs Saatları</h2>
+      <ul>
+        <li>Cumhurbaşkanlıq IX A sinfi – <strong>Çərşənbə, 14:00</strong></li>
+        <li>İX B sinfi – <strong>Cümə, 10:00</strong></li>
+        <li>X sinif (QEY hazırlığı) – <strong>Bazar ertəsi, 16:00</strong></li>
+        <li>XI sinif – <strong>Şərəf, 15:00</strong></li>
+      </ul>
+      <div class="announcement" style="margin-top: 15px;">
+        <p><strong>Zoom dərsləri:</strong> Link tələbə qrupuna hər dərs əvvəli göndərilir. Zoom ID: <code>123 456 7890</code>, Şifrə: <code>muellim2025</code></p>
+      </div>
+    </section>
+
+    <!-- Əlaqə -->
+    <section id="elaqe" class="card">
+      <h2>Əlaqə</h2>
+      <p>
+        <strong>📧 Email:</strong> muellim@edu.az<br>
+        <strong>📞 Telefon:</strong> +994 55 123 45 67<br>
+        <strong>📍 Məktəb:</strong> Bakı Şəhər, Nizami Rayonu, 123 Nömrəli Məktəb
+      </p>
+      <p style="margin-top: 15px; font-style: italic; color: #7f8c8d;">
+        Suallarınız varsa, zəhmət olmasa email və ya telefonla əlaqə saxlayın.
+      </p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      © 2025 Əziz Müəllim. Bütün hüquqlar qorunur. | Bu sayt GitHub Pages ilə hazırlanmışdır.
+      © 2025 Əziz Müəllim. Bütün hüquqlar qorunur.<br>
+      Bu sayt GitHub Pages ilə hazırlanmışdır.
     </footer>
+
   </div>
+
 </body>
 </html>
