@@ -26,7 +26,7 @@
 
     .container {
       width: 90%;
-      max-width: 1050px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
     }
@@ -53,7 +53,7 @@
       margin: 0 auto;
     }
 
-    /* Menyu - Neon xətti */
+    /* Menyu */
     nav {
       display: flex;
       justify-content: center;
@@ -71,7 +71,7 @@
       transform: translateX(-50%);
       width: 80%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(106, 90, 205, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(106, 90, 255, 0.3), transparent);
     }
 
     nav a {
@@ -147,27 +147,6 @@
       100% { opacity: 1; transform: scale(1.1); }
     }
 
-    ul {
-      list-style: none;
-    }
-
-    ul li {
-      padding: 13px 18px;
-      margin: 10px 0;
-      background: rgba(240, 248, 255, 0.5);
-      border-radius: 14px;
-      font-size: 1.08rem;
-      color: #34495e;
-      border-left: 4px solid #6a5acd;
-      transition: all 0.2s ease;
-    }
-
-    ul li:hover {
-      background: rgba(130, 90, 255, 0.12);
-      border-left: 4px solid #5b4cbf;
-      transform: translateX(4px);
-    }
-
     /* Duyuru stili */
     .announcement {
       background: rgba(255, 245, 230, 0.6);
@@ -219,10 +198,6 @@
       .card {
         padding: 24px;
       }
-      ul li {
-        font-size: 1rem;
-        padding: 11px 15px;
-      }
     }
   </style>
 </head>
@@ -236,12 +211,9 @@
       <p>Azərbaycan Dili & Riyaziyyat | IX–XI Siniflər</p>
     </header>
 
-    <!-- Menyu -->
+    <!-- Menyu (Yalnız qalan bölmələr üçün) -->
     <nav>
       <a href="#haqqinda">Haqqında</a>
-      <a href="#dersler">Dərslər</a>
-      <a href="#ev-tapsiriqlari">Ev Tapsırıqları</a>
-      <a href="#pdf-materiallar">PDF Materiallar</a>
       <a href="#ders-saatlari">Dərs Saatları</a>
       <a href="#elaqe">Əlaqə</a>
     </nav>
@@ -254,57 +226,27 @@
         Tələbələrimin düşünmə qabiliyyətini inkişaf etdirmək və bilikləri praktikada istifadə etməyi öyrətmək məqsədimdir.
       </p>
       <p style="margin-top: 12px;">
-        Bu saytda bütün dərslər, ev tapsırıqları və materiallar yer alır. Həftəlik yeniləmələrdən xəbərdar olmaq üçün saytı mütəmadi ziyarət edin.
-      </p>
-    </section>
-
-    <!-- Dərslər -->
-    <section id="dersler" class="card">
-      <h2>Dərslər</h2>
-      <ul>
-        <li><strong>Azərbaycan Dili:</strong> Qrammatika, ifadə quruluşu, redaksiya</li>
-        <li><strong>Ədəbiyyat:</strong> Klassik və müasir ədəbiyyat, analiz və təhlil</li>
-        <li><strong>Riyaziyyat:</strong> Cəbr, həndəsə, triqonometriya, statistika</li>
-        <li><strong>Hazırlıq:</strong> QEY, Üçüncü Dövr, buraxılış imtahanlarına hazırlıq</li>
-      </ul>
-    </section>
-
-    <!-- Ev Tapsırıqları -->
-    <section id="ev-tapsiriqlari" class="card">
-      <h2>Ev Tapsırıqları</h2>
-      <div class="announcement">
-        <p><strong>📘 Azərbaycan Dili:</strong> Səh. 45, №12–18. Son tarix: <em>12 Noyabr</em></p>
-      </div>
-      <div class="announcement">
-        <p><strong>🧮 Riyaziyyat:</strong> Kvadrat tənliklər üzərində 10 nümunə həll et. Son tarix: <em>14 Noyabr</em></p>
-      </div>
-      <div class="announcement">
-        <p><strong>📖 Ədəbiyyat:</strong> "Vaqif" pyesinin son 3 fəslini oxu və xülasə yaz. Son tarix: <em>15 Noyabr</em></p>
-      </div>
-    </section>
-
-    <!-- PDF Materiallar -->
-    <section id="pdf-materiallar" class="card">
-      <h2>PDF Materiallar</h2>
-      <ul>
-        <li><a href="#!" download>Cəbr Dərsliyi (IX sinif).pdf</a></li>
-        <li><a href="#!" download>Azərbaycan Dili Qrammatikası.pdf</a></li>
-        <li><a href="#!" download>QEY Hazırlığı – 2025.pdf</a></li>
-        <li><a href="#!" download>Triqonometriya Cədvəli.pdf</a></li>
-      </ul>
-      <p style="margin-top: 16px; font-size: 0.95rem; color: #7f8c8d;">
-        <em>PDF-ləri yükləmək üçün klikləyin. Yeni materiallar hər cümə günü əlavə olunur.</em>
+        Bu saytda yalnız ən vacib məlumatlar yer alır: dərs saatları, əlaqə və şəxsi məlumatlar. 
+        Daha ətraflı materiallar dərs zamanı paylanır.
       </p>
     </section>
 
     <!-- Dərs Saatları -->
     <section id="ders-saatlari" class="card">
       <h2>Dərs Saatları</h2>
-      <ul>
-        <li>Cumhurbaşkanlıq IX A sinfi – <strong>Çərşənbə, 14:00</strong></li>
-        <li>İX B sinfi – <strong>Cümə, 10:00</strong></li>
-        <li>X sinif (QEY hazırlığı) – <strong>Bazar ertəsi, 16:00</strong></li>
-        <li>XI sinif – <strong>Şərəf, 15:00</strong></li>
+      <ul style="list-style: none; padding-left: 0;">
+        <li style="padding: 13px 18px; margin: 10px 0; background: rgba(240, 248, 255, 0.5); border-radius: 14px; border-left: 4px solid #6a5acd;">
+          <strong>Cumhurbaşkanlıq IX A sinfi</strong> – Çərşənbə, 14:00
+        </li>
+        <li style="padding: 13px 18px; margin: 10px 0; background: rgba(240, 248, 255, 0.5); border-radius: 14px; border-left: 4px solid #6a5acd;">
+          <strong>İX B sinfi</strong> – Cümə, 10:00
+        </li>
+        <li style="padding: 13px 18px; margin: 10px 0; background: rgba(240, 248, 255, 0.5); border-radius: 14px; border-left: 4px solid #6a5acd;">
+          <strong>X sinif (QEY hazırlığı)</strong> – Bazar ertəsi, 16:00
+        </li>
+        <li style="padding: 13px 18px; margin: 10px 0; background: rgba(240, 248, 255, 0.5); border-radius: 14px; border-left: 4px solid #6a5acd;">
+          <strong>XI sinif</strong> – Şərəf, 15:00
+        </li>
       </ul>
       <div class="announcement" style="margin-top: 16px;">
         <p><strong>🌐 Online dərslər:</strong> Zoom ilə keçirilir. ID: <code>123 456 7890</code>, Şifrə: <code>muellim2025</code></p>
