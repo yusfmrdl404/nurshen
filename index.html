@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Əziz Müəllim</title>
+  <style>
+    /* Ümumi sıfırlama */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 200, 150, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(180, 220, 255, 0.2) 0%, transparent 40%);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+      padding: 40px;
+      margin: 20px auto;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .signature {
+      font-style: italic;
+      color: #8e44ad;
+      font-weight: 500;
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Əziz Müəllim</h1>
+      <h2>Sizin üçün xüsusi bir sayt</h2>
+      <p>
+        Sizin kimi bir müəllimin olması həqiqətən böyük bir şərəftir.
+        Bilikləriniz, səbriiniz və tələbələrinizə olan sevginiz bizi hər gün daha yaxşı olmağa sövq edir.
+      </p>
+      <p>
+        Bu sayt, sizin tələbələrinizdən birinin – qarşınızda durmaq şərəfinə nail olmaq üçün yaradılıb.
+      </p>
+      <p class="signature">— Tələbəniz tərəfindən ❤️</p>
+    </div>
+  </div>
+</body>
+</html>
