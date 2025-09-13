@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Əziz Müəllim</title>
+  <title>Əziz Müəllimin Dərsləri</title>
   <style>
-    /* Ümumi sıfırlama */
+    /* Genel sıfırlama */
     * {
       margin: 0;
       padding: 0;
@@ -13,93 +13,155 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-image: 
-        radial-gradient(circle at 20% 30%, rgba(255, 200, 150, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(180, 220, 255, 0.2) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(200, 230, 255, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255, 220, 200, 0.3) 0%, transparent 30%);
     }
 
     .container {
       width: 90%;
-      max-width: 800px;
-      padding: 40px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    header {
       text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
-      padding: 40px;
-      margin: 20px auto;
-      transition: transform 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
+    .card h2 {
+      font-size: 1.8rem;
+      color: #2980b9;
       margin-bottom: 15px;
       font-weight: 600;
     }
 
-    h2 {
-      font-size: 1.4rem;
-      color: #7f8c8d;
-      margin-bottom: 20px;
+    .lesson-list {
+      list-style: none;
     }
 
-    p {
+    .lesson-list li {
+      padding: 12px 15px;
+      margin: 10px 0;
+      background: rgba(240, 248, 255, 0.6);
+      border-radius: 12px;
       font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 15px;
+      color: #34495e;
+      border-left: 4px solid #3498db;
     }
 
-    .signature {
-      font-style: italic;
-      color: #8e44ad;
-      font-weight: 500;
-      margin-top: 20px;
-      font-size: 1.2rem;
+    .announcement {
+      background: rgba(255, 240, 200, 0.6);
+      border-left: 4px solid #f39c12;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      color: #8a6d3b;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #95a5a6;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
       }
       .card {
-        padding: 30px;
+        padding: 20px;
+      }
+      .lesson-list li {
+        font-size: 1rem;
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <header>
+      <h1>📚 Dərslərim</h1>
+      <p>Əziz müəllim — Biliklərinizi tələbələrlə paylaşmaq üçün yaradılmış rəsmi sayt.</p>
+    </header>
+
+    <!-- Dərs 1 -->
     <div class="card">
-      <h1>Əziz Müəllim</h1>
-      <h2>Sizin üçün xüsusi bir sayt</h2>
-      <p>
-        Sizin kimi bir müəllimin olması həqiqətən böyük bir şərəftir.
-        Bilikləriniz, səbriiniz və tələbələrinizə olan sevginiz bizi hər gün daha yaxşı olmağa sövq edir.
-      </p>
-      <p>
-        Bu sayt, sizin tələbələrinizdən birinin – qarşınızda durmaq şərəfinə nail olmaq üçün yaradılıb.
-      </p>
-      <p class="signature">— Tələbəniz tərəfindən ❤️</p>
+      <h2>Azərbaycan Dili və Ədəbiyyat</h2>
+      <ul class="lesson-list">
+        <li>İsimlər və simlər arasında fərq</li>
+        <li>Şeirlərdə aliterasiya və metafora</li>
+        <li>N.Nərimanovun əsərləri</li>
+        <li>Qafiyə növləri və bənd quruluşu</li>
+      </ul>
+      <p><strong>Ev tapşırığı:</strong> "Vaqif" pyesinin mövzusu haqqında 200 söz yazın. Son tarix: 10 Noyabr.</p>
     </div>
+
+    <!-- Dərs 2 -->
+    <div class="card">
+      <h2>Riyaziyyat</h2>
+      <ul class="lesson-list">
+        <li>Kvadrat tənliklərin həlli</li>
+        <li>Funksiyalar və qrafiklər</li>
+        <li>Törəmələrə giriş</li>
+        <li>Triqonometrik ifadələr</li>
+      </ul>
+      <p><strong>Test:</strong> Gələn həftə Cümə günü riyaziyyat testi keçiriləcək. Hazırlıq üçün Fənn Kitabı, səhifə 87–105.</p>
+    </div>
+
+    <!-- Duyuru -->
+    <div class="card">
+      <h2>📢 Duyurular</h2>
+      <div class="announcement">
+        <p><strong>Diqqət!</strong> Dərs saatları cümə axşamı 16:00-dan sonra <strong>Zoom</strong> ilə keçiriləcək. Link tələbə qrupuna göndəriləcək.</p>
+      </div>
+      <div class="announcement" style="margin-top: 15px;">
+        <p>Yeni dərs planı PDF formatda <strong>"Sənədlər"</strong> bölməsində yüklənib.</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Əziz Müəllim. Bütün hüquqlar qorunur. | Bu sayt GitHub Pages ilə hazırlanmışdır.
+    </footer>
   </div>
 </body>
 </html>
